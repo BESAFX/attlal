@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Contract" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" whenResourceMissingType="Empty" uuid="d667083a-5ee3-46f8-b604-36494df2d410">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<import value="com.besafx.app.util.DateConverter"/>
+	<import value="com.besafx.app.util.ArabicLiteralNumberParser"/>
+	<parameter name="CONTRACT" class="com.besafx.app.entity.Contract"/>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BACKGROUND" class="java.lang.String" isForPrompting="false"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="802" uuid="2362171d-4b4e-4fce-8dd3-a845fe0aecd4"/>
+				<box padding="0">
+					<pen lineColor="#303F9F"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="802" uuid="2b7e890b-32d7-4a39-8da9-3822947403f2"/>
+					<imageExpression><![CDATA[$P{BACKGROUND}]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="50">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="50" uuid="b1c3b6af-9342-4c77-8f6e-69032a3f1b87">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="345" y="0" width="210" height="50" uuid="2497bb84-0159-4024-a286-f825cfaa0ee5">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<staticText>
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="210" height="25" uuid="d0b2c1f7-224b-4e75-9699-383bf619bfd8"/>
+						<box padding="0">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+							<font fontName="PT Bold Heading" size="12" isBold="false" isUnderline="false"/>
+							<paragraph lineSpacing="Single" lineSpacingSize="1.0" spacingBefore="0" spacingAfter="0"/>
+						</textElement>
+						<text><![CDATA[مؤسسة الأطلال الشمالية]]></text>
+					</staticText>
+					<staticText>
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="25" width="210" height="25" uuid="62b2df48-9d19-43b4-ab15-be475cf795de"/>
+						<box padding="0">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#303F9F"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+							<font fontName="PT Bold Heading" size="6" isBold="false" isUnderline="false"/>
+							<paragraph lineSpacing="Single" lineSpacingSize="1.0" spacingBefore="0" spacingAfter="0"/>
+						</textElement>
+						<text><![CDATA[لبيع وشراء الأجهزة الكهربائية والأجهزة المنزلية بالجملة
+بالنقد أو التقسيط]]></text>
+					</staticText>
+				</frame>
+				<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" isUsingCache="true" isLazy="true" onErrorType="Blank">
+					<reportElement x="252" y="0" width="50" height="50" uuid="6f92aa25-0547-4a9b-86b3-8d69d6ec0b38">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+				</image>
+				<frame>
+					<reportElement x="0" y="0" width="164" height="50" uuid="7c6d0e1a-f91e-4835-8fec-5c506d099533">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#448AFF"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textField isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="164" height="18" forecolor="#303F9F" uuid="a6c253cd-aca0-4500-a531-2c9e91f85c90"/>
+						<box padding="0">
+							<pen lineWidth="0.5" lineColor="#448AFF"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+							<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+							<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA["رقم العقد: " + $P{CONTRACT}.getCode()]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="18" width="164" height="16" forecolor="#303F9F" uuid="c35095dd-51cd-4146-af6c-9267212d3544"/>
+						<box padding="0">
+							<pen lineWidth="0.5" lineColor="#448AFF"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+							<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+							<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA["الموافق: "  +DateConverter.getDateInFormatLTR($P{CONTRACT}.getWrittenDate())]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="34" width="164" height="16" forecolor="#303F9F" uuid="58d48727-bb65-44b8-b8d5-085e1ad65235"/>
+						<box padding="0">
+							<pen lineWidth="0.5" lineColor="#448AFF"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+							<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+							<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA["التاريخ: " + DateConverter.getHijriStringFromDateLTR($P{CONTRACT}.getWrittenDate())]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="216" y="9" width="122" height="25" forecolor="#303F9F" uuid="f4ccace7-83ad-4737-956c-319c69423d74">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="2.0" lineColor="#448AFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="PT Bold Heading" size="14" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="0" spacingBefore="0" spacingAfter="0"/>
+				</textElement>
+				<text><![CDATA[عقد بيع بالتقسيط]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="29">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="29" uuid="2d6a59ec-aa9d-4be1-836c-0280402a2cbc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="2.25" lineColor="#448AFF"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="29" forecolor="#303F9F" uuid="a1d1e8d9-4af3-495b-b432-16115b86b1df"/>
+					<box padding="0">
+						<pen lineWidth="0.5" lineColor="#0F8628"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+						<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+					</textElement>
+					<text><![CDATA[عرعر - حي الصالحية - شارع الأمير متعب بن عبد العزيز - س.ت: 3450171592 - رخصة: 390945671 - جوال: 0551138008]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="681">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="681" uuid="1ae7eac9-232d-44a1-b6d0-c085b31893c6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="3.0" lineColor="#448AFF"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="10" width="555" height="490" uuid="5ac94afd-3ef2-44e0-99a6-54abba6c6e27">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#448AFF"/>
+					</box>
+					<frame>
+						<reportElement x="0" y="0" width="555" height="18" uuid="17d8d057-7551-4f22-8d9e-8398b86ea343">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="140" height="18" forecolor="#000000" uuid="ca5ac997-746b-42ed-9a11-03b7857dbd0c"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getIdentityNumber()]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="271" height="18" forecolor="#000000" uuid="f591b2e4-7e95-4ba7-b3a2-47a605018808"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getShortName()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="c8b472b4-cbf2-429c-a91f-6fc2789b3a4a"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[نعم أنا / ]]></text>
+						</staticText>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="140" y="0" width="84" height="18" forecolor="#303F9F" uuid="78701a85-6e30-4396-97a6-ebf4bc1cc387"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[حامل بطاقة رقم]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="18" width="555" height="18" uuid="967c6964-1e63-40f7-83e5-8f6229013eed"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="d5562add-f499-48bf-b8f3-94b36be18695"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وحفيظة رقم / ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="e6536879-cb47-46e9-be9d-a4d8a255d5bb"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getPassportNumber()]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="130" height="18" forecolor="#000000" uuid="cfcf5c20-0992-41b0-ad6a-003814b72f7e"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[DateConverter.getDateInFormat($P{CONTRACT}.getCustomer().getContact().getPassportDate())]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="42" height="18" forecolor="#303F9F" uuid="25e70cc8-9f80-4510-a381-8ddafe6d23fd"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[بتاريخ]]></text>
+						</staticText>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="fcff4b3f-88e5-4634-8c41-6e8d406903c3"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[صادرة من]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="172" y="0" width="104" height="18" forecolor="#000000" uuid="7a8678ba-f5a7-47f1-a3ee-283a933ecf03"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getPassportAddress()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="36" width="555" height="18" uuid="493dd023-4bdc-4f33-b0ff-c8eb87756510"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="070ed28b-317b-48da-97d0-f5f31a1861fe"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وأعمل في]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="fdcb79cc-40be-448a-95c0-13159a71acfd"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getQualification()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="5cf4c35f-242f-4feb-bf5c-46cb8e38891c"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وعنواني]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="276" height="18" forecolor="#000000" uuid="e63ccd1b-47f9-4a17-83ca-40414cefe2e4"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getAddress()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="54" width="555" height="18" uuid="70eaf63a-7bdf-4868-b662-fc1a6348cdee"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="bd498616-73f4-4df3-8285-b7ddfbba314f"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[جــــوال /]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="3ad57725-21f9-4bf8-989d-63de5ccc9413"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getMobile()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="aed691a4-7f0b-4c02-999b-57fc382b3856"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[رقم العمل / ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="276" height="18" forecolor="#000000" uuid="91384372-e1dc-479b-99b2-63f94cce3ce9"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getPhone()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="72" width="555" height="18" uuid="25a825aa-b64d-4f2e-a258-b72fba112f1c">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="223" height="18" forecolor="#000000" uuid="ea7112f7-b4fe-49af-a58b-514d320ee426"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSeller().getContact().getShortName()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="249" y="0" width="306" height="18" forecolor="#303F9F" uuid="73fca294-82cb-464b-abba-2be8b4a3507a"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[أقر واعترف وانا في حالتي الشرعية وبكامل قواي العقلية بأن في ذمتي للمدعو / ]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="90" width="555" height="18" uuid="c72252d1-f5f7-4f6e-bef2-017f3f56fe49">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="505" height="18" forecolor="#000000" uuid="c4036480-bd70-411d-86a8-a5711ef5d279"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getTotalPriceAfterDiscountAndVat() + 
+ " ( " + ArabicLiteralNumberParser.literalValueOf($P{CONTRACT}.getTotalPriceAfterDiscountAndVat()) + " ريال فقط لا غير " +  " )"]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="505" y="0" width="50" height="18" forecolor="#303F9F" uuid="a7218128-7156-45b9-854b-11216d742073"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[مبلغ وقدره]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="113" width="555" height="18" uuid="759e28e6-5791-472d-974f-7d5e98bf1384">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="505" height="18" forecolor="#000000" uuid="a2e0e548-33ba-4ffc-9dc2-9496f903b6a0"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getContractProductsNames()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="505" y="0" width="50" height="18" forecolor="#303F9F" uuid="f65a008b-c2dd-4100-b9f1-4aac882f932a"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وذلك قيمة]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="131" width="555" height="18" uuid="86a2f868-dfd8-49fe-bdc1-f5a37f19c6bf">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="25" y="0" width="530" height="18" forecolor="#303F9F" uuid="7f61ec92-8e6b-4939-aab4-c0f396c0f794"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[على أن يدفع المبلغ على أقساط شهرية ومستمرة دون انقطاع بما فيها شهر رمضان والأعيـــــاد.]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="149" width="555" height="18" uuid="33150718-3542-4a42-84f8-2d6f477a2a6d">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="129" height="18" forecolor="#000000" uuid="f6190a85-ef62-47df-9e93-a51f70e11bbb"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[DateConverter.getDateInFormatLTR($P{CONTRACT}.getPremiumStartDate())]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="69" height="18" forecolor="#303F9F" uuid="0d79e2a2-1ce2-43eb-813b-9f8fc49c5b67"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[اعتبارا من تاريخ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="199" y="0" width="296" height="18" forecolor="#000000" uuid="02bc4882-77c0-4ce5-a7ef-d914e5a8a942"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getPremiumAmount() + 
+ " ( " + ArabicLiteralNumberParser.literalValueOf($P{CONTRACT}.getPremiumAmount()) + " ريال فقط لا غير " +  " )"]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="3fd8468d-2ed2-4e89-b6b9-043d59c77d79"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[القسط الواحد]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="167" width="555" height="53" uuid="b2ebe0f1-4961-4876-87b0-d0370a0bc98a">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="53" forecolor="#303F9F" uuid="64c5ef06-45ac-474d-8ff1-60aa27e74b1a"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[حتى نهاية المبلغ المذكور أعلاه وأنني مستعد بسداد الأقساط فى موعدها المحدد بدون تأخر وإذا تأخر أي قسط عن موعده المحدد فإنني ملزم التزاما تاما بسداد المبلغ المتبقي كاملا دفعة واحدة.
+وقد استلمت البضاعة بحالتها الراهنة خارج المستودع وعاينتها معاينة منافية للجهالة وقبلتها وحزتها وتأكدت من عددها وتصرفت بها كما أنني أقر على نفسي بأنه لا يوجد على التزامات مالية ولا كفالات غرامية.]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="220" width="555" height="40" uuid="93effd5e-9300-4b7e-877b-95e008d3b839">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField>
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="40" forecolor="#000000" uuid="46f18098-1d23-4feb-af33-bd7a55c8830c">
+								<printWhenExpression><![CDATA[$P{CONTRACT}.getNote() != null]]></printWhenExpression>
+							</reportElement>
+							<box topPadding="5" leftPadding="0" bottomPadding="0" rightPadding="0">
+								<pen lineWidth="0.5" lineColor="#303F9F"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Top" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA["ملاحظة: " + $P{CONTRACT}.getNote()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="260" width="555" height="29" uuid="716a2539-e8e6-412a-b1be-23aaf4253b01">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="29" forecolor="#303F9F" uuid="7f26afd5-2531-4ca9-b307-8d55c9b1d8ce"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#303F9F"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+								<font fontName="PT Bold Heading" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وأذنت لمن يشهد والله خير الشاهــــــــــدين ،،،]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="289" width="555" height="40" uuid="7e7811e2-e246-4975-b4d7-091bea4255be">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="190" y="6" width="174" height="29" forecolor="#303F9F" uuid="21a1bde6-bef0-4ac1-beb7-ae258deba834"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#303F9F"/>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#303F9F"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#303F9F"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#303F9F"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#303F9F"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+								<font fontName="PT Bold Heading" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[إقرار الكفيل بالكفالة الغرامية]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="329" width="555" height="18" uuid="abb53626-708c-4ef5-b957-fa21cd87bb5f">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="140" height="18" forecolor="#000000" uuid="0739ab06-3c97-4a63-8ba5-b981678e192b"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getIdentityNumber()]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="271" height="18" forecolor="#000000" uuid="1d865052-0711-4a6d-90c9-4212f846a5f4"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getShortName()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="03f32219-f3cd-4aa3-9309-f6c684ed0e7f"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[نعم أنا / ]]></text>
+						</staticText>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="140" y="0" width="84" height="18" forecolor="#303F9F" uuid="ed025fdf-011b-4e6f-823d-a214bdde2bc4"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[حامل بطاقة رقم]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="347" width="555" height="18" uuid="01dbee8d-9218-4a04-b4da-a0bf2e7565f1"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="bad2f856-6839-4975-971a-80c990ecbced"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وحفيظة رقم / ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="2d835be7-b5e1-467d-b21a-5270f4c60bc8"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getPassportNumber()]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="130" height="18" forecolor="#000000" uuid="0b4b9928-dd2f-4198-859f-c7c047d19752"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[DateConverter.getDateInFormat($P{CONTRACT}.getSponsor1().getContact().getPassportDate())]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="42" height="18" forecolor="#303F9F" uuid="c69a5ef8-c3dc-45ec-8384-002298edd481"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[بتاريخ]]></text>
+						</staticText>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="9d3b471b-fdfa-4ce9-b577-207032223946"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[صادرة من]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="172" y="0" width="104" height="18" forecolor="#000000" uuid="e9309eac-cad2-474a-bbef-49c7b184be73"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getPassportAddress()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="365" width="555" height="18" uuid="f165fdb0-9c1e-426f-bd7a-13978e3e75c4"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="ffb88bb4-b45c-479a-90b3-56e9bac771e9"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وأعمل في]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="170e34df-8b5f-47cb-a003-4d71299af8b4"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getQualification()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="4620ffef-ee67-4bbd-8b5a-1f4562ed4141"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[وعنواني]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="276" height="18" forecolor="#000000" uuid="19405a8c-381f-4b84-9964-a2170aaee0c9"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getAddress()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="383" width="555" height="18" uuid="fa45e997-9aac-4d4e-8eb1-9ab6a5c750a1"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="495" y="0" width="60" height="18" forecolor="#303F9F" uuid="30be4ed9-908a-40d1-94cd-d3699af05e57"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[جــــوال /]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="330" y="0" width="165" height="18" forecolor="#000000" uuid="effd5819-c6a6-4992-a594-6ed118977f41"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getMobile()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="276" y="0" width="54" height="18" forecolor="#303F9F" uuid="f1ff939a-b9e8-4863-a2c8-27d200810eea"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[رقم العمل / ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="276" height="18" forecolor="#000000" uuid="f9439e8a-9678-47fc-a53c-7317d49e5ab9"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getPhone()]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="401" width="555" height="18" uuid="5167ec84-7448-47bc-bdae-3d3d67d614a5"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="420" y="0" width="134" height="18" forecolor="#303F9F" uuid="8391fde1-2b80-486c-913b-ae1318121c67"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[أقر وأعترف بأنني أكفل المدعو / ]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="185" y="0" width="234" height="18" forecolor="#000000" uuid="a5609dd4-0293-40a0-8dbb-469079db1c58"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getShortName()]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="18" forecolor="#303F9F" uuid="b6db629d-9913-4b81-9bb7-069e7f27808a"/>
+							<box padding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[كفالة غرم وأداء وتسديد المبلغ لأي سبب كان كما]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="419" width="555" height="70" uuid="327b7be0-562f-427b-8eca-49ace3af7d16"/>
+						<staticText>
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="70" forecolor="#303F9F" uuid="d13488bd-a620-44e9-b996-53fc6d04d30d"/>
+							<box topPadding="5" leftPadding="0" bottomPadding="0" rightPadding="0">
+								<pen lineWidth="0.5" lineColor="#0F8628"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Top" rotation="None">
+								<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+							</textElement>
+							<text><![CDATA[كما أنني اكفله سواء كان حياً أو ميتاً كما أنني أقر على نفسي بأنه لا يوجد علي إلتزامات مالية ولا كفالات غرامية.
+
+ملاحظات: في حالة انقطاع أو تأخير المشتري عن سداد القسط الشهري في الموعد المحدد لمدة شهرين متتالين أو ثلاثة أشهر متفرقة يحق للبائع مطالبة المشتري والكفيل بدفع كامل المبلغ المتبقي.]]></text>
+						</staticText>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement x="0" y="500" width="555" height="160" uuid="1a14e8e5-935f-4a8c-88ed-8515224b56df">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<frame>
+						<reportElement x="0" y="0" width="555" height="80" uuid="69810f02-17e4-46d6-aeb2-004081ceaa51">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+						</reportElement>
+						<frame>
+							<reportElement x="0" y="0" width="185" height="80" uuid="a0ef6be7-9ba7-449d-9ebf-f04f1863dfe7">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="28" forecolor="#303F9F" uuid="9774d9c8-5408-4029-b254-0afbc572b852"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[البائع]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="185" height="26" forecolor="#000000" uuid="959f4142-72c0-42cc-9128-b7c8062836eb"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{CONTRACT}.getSeller().getContact().getShortName()]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="54" width="185" height="26" forecolor="#303F9F" uuid="3cb09d29-a8ba-46b6-ba20-b543ad735a3d"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[التوقيع/.......................................]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="185" y="0" width="185" height="80" uuid="3c0fd075-c9d7-4081-92fb-657e26bb145a">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="28" forecolor="#303F9F" uuid="106e74e9-1efe-41fa-ae7b-ffe5b26e27b9"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[المقر بما فيه الكفيل]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="185" height="26" forecolor="#000000" uuid="f2a23804-72eb-4503-aace-6421fcbe2c27"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{CONTRACT}.getSponsor1().getContact().getShortName()]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="54" width="185" height="26" forecolor="#303F9F" uuid="b1921582-e455-4824-b8e1-2a5f7e9af6d4"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[التوقيع/.......................................]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="370" y="0" width="185" height="80" uuid="f256d6a0-3d0b-431d-9880-ff87eaab68d0">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="28" forecolor="#303F9F" uuid="1a0c5331-3032-46c6-9a8d-82d787eb729d"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[المقر بما فيه المشتري]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="185" height="26" forecolor="#000000" uuid="ff3647f0-4da0-44fd-8bcb-198a4acd1445"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="12" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{CONTRACT}.getCustomer().getContact().getShortName()]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="54" width="185" height="26" forecolor="#303F9F" uuid="d794fcd1-234d-4351-9e06-7a506037ee74"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[التوقيع/.......................................]]></text>
+							</staticText>
+						</frame>
+					</frame>
+					<frame>
+						<reportElement x="0" y="80" width="555" height="80" uuid="7f4fadb0-6c74-4035-80d4-d4a77ac026f3">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+						</reportElement>
+						<frame>
+							<reportElement x="0" y="0" width="185" height="80" uuid="3a760d1f-e7bf-430a-ab4e-0cd986873dd7">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="28" forecolor="#303F9F" uuid="8ce95b27-194b-43ce-981f-1b0f8cd15869"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[الشاهد الثاني]]></text>
+							</staticText>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="185" height="26" forecolor="#303F9F" uuid="818728ce-67cd-485c-a8f3-b1e585272854"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[الاسم/.......................................]]></text>
+							</staticText>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="54" width="185" height="26" forecolor="#303F9F" uuid="4458e14c-35e3-47bf-b282-8c2499934f26"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[التوقيع/.......................................]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="185" y="0" width="185" height="80" uuid="0702069d-7965-4e2b-936d-48693cb4c6f4">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="40" forecolor="#303F9F" uuid="e83db0a3-0bfc-498b-bc5d-07eb371e2259"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="16" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[الختم]]></text>
+							</staticText>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="40" width="185" height="40" forecolor="#303F9F" uuid="0b6f345c-5230-4729-8a78-0076ae709dc0"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="370" y="0" width="185" height="80" uuid="1ffba621-0465-4b1d-b1a6-95b2333a1d07">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+							</reportElement>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="185" height="28" forecolor="#303F9F" uuid="9e10d952-c1f6-434c-b8c9-ddffe6df8e2b"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="true" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="5" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[الشاهد الأول]]></text>
+							</staticText>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="28" width="185" height="26" forecolor="#303F9F" uuid="0d0abcf9-5e08-472a-9dc5-661dc3c89519"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[الاسم/.......................................]]></text>
+							</staticText>
+							<staticText>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="54" width="185" height="26" forecolor="#303F9F" uuid="f7454406-ab4b-4c61-babb-b6f8bcc3562b"/>
+								<box padding="0">
+									<pen lineWidth="0.5" lineColor="#0F8628"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+									<font fontName="Arial" size="14" isBold="false" isUnderline="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
+								</textElement>
+								<text><![CDATA[التوقيع/.......................................]]></text>
+							</staticText>
+						</frame>
+					</frame>
+				</frame>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>
