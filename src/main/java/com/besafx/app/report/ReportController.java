@@ -1,7 +1,6 @@
 package com.besafx.app.report;
 
 import com.besafx.app.component.ReportExporter;
-import com.besafx.app.entity.BankTransaction;
 import com.besafx.app.enums.ExportType;
 import com.besafx.app.init.Initializer;
 import com.besafx.app.service.BankTransactionService;
@@ -53,6 +52,24 @@ public class ReportController {
         map.put("BACKGROUND", options.getBackground());
 
         ClassPathResource jrxmlFile = new ClassPathResource("/report/contract/Contract.jrxml");
+        JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlFile.getInputStream());
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map);
+        reportExporter.export(ExportType.PDF, response, jasperPrint);
+    }
+
+    @RequestMapping(value = "/report/draft/{contractId}", method = RequestMethod.GET, produces = "application/pdf")
+    @ResponseBody
+    public void printDraft(
+            @PathVariable(value = "contractId") Long contractId,
+            HttpServletResponse response) throws Exception {
+        Map<String, Object> map = new HashMap<>();
+        map.put("CONTRACT", contractService.findOne(contractId));
+
+        CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
+        map.put("LOGO", options.getLogo());
+        map.put("BACKGROUND", options.getBackground());
+
+        ClassPathResource jrxmlFile = new ClassPathResource("/report/contract/Draft.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlFile.getInputStream());
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map);
         reportExporter.export(ExportType.PDF, response, jasperPrint);

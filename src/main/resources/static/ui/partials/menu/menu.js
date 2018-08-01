@@ -1245,6 +1245,9 @@ app.controller("menuCtrl", [
         $scope.printContract = function (contract) {
             window.open('/report/contract/' + contract.id);
         };
+        $scope.printDraft = function (contract) {
+            window.open('/report/draft/' + contract.id);
+        };
         $scope.rowMenuContract = [
             {
                 html: '<div class="drop-menu">' +
@@ -1340,6 +1343,18 @@ app.controller("menuCtrl", [
                 },
                 click: function ($itemScope, $event, value) {
                     $scope.printContract($itemScope.contract);
+                }
+            },
+            {
+                html: '<div class="drop-menu">' +
+                '<img src="/ui/img/' + $rootScope.iconSet + '/print.' + $rootScope.iconSetType + '" width="24" height="24">' +
+                '<span>طباعة كمبيالة</span>' +
+                '</div>',
+                enabled: function () {
+                    return true;
+                },
+                click: function ($itemScope, $event, value) {
+                    $scope.printDraft($itemScope.contract);
                 }
             }
         ];
