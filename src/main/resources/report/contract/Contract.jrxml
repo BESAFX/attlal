@@ -325,7 +325,7 @@
 								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
 								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
 							</textElement>
-							<textFieldExpression><![CDATA[DateConverter.getDateInFormat($P{CONTRACT}.getCustomer().getContact().getPassportDate())]]></textFieldExpression>
+							<textFieldExpression><![CDATA[DateConverter.getHijriStringFromDateLTR($P{CONTRACT}.getCustomer().getContact().getPassportDate())]]></textFieldExpression>
 						</textField>
 						<staticText>
 							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="42" height="18" forecolor="#303F9F" uuid="25e70cc8-9f80-4510-a381-8ddafe6d23fd"/>
@@ -642,7 +642,7 @@
 								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
 								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
 							</textElement>
-							<textFieldExpression><![CDATA[DateConverter.getDateInFormatLTR($P{CONTRACT}.getPremiumStartDate())]]></textFieldExpression>
+							<textFieldExpression><![CDATA[DateConverter.getHijriStringFromDateLTR($P{CONTRACT}.getPremiumStartDate())]]></textFieldExpression>
 						</textField>
 						<staticText>
 							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="69" height="18" forecolor="#303F9F" uuid="0d79e2a2-1ce2-43eb-813b-9f8fc49c5b67"/>
@@ -880,7 +880,7 @@
 								<font fontName="Arial" size="12" isBold="false" isUnderline="true"/>
 								<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="10" spacingBefore="0" spacingAfter="0"/>
 							</textElement>
-							<textFieldExpression><![CDATA[DateConverter.getDateInFormat($P{CONTRACT}.getSponsor1().getContact().getPassportDate())]]></textFieldExpression>
+							<textFieldExpression><![CDATA[DateConverter.getHijriStringFromDateLTR($P{CONTRACT}.getSponsor1().getContact().getPassportDate())]]></textFieldExpression>
 						</textField>
 						<staticText>
 							<reportElement stretchType="RelativeToTallestObject" x="130" y="0" width="42" height="18" forecolor="#303F9F" uuid="c69a5ef8-c3dc-45ec-8384-002298edd481"/>

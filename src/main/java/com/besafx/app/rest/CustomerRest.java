@@ -190,6 +190,10 @@ public class CustomerRest {
     @PreAuthorize("hasRole('ROLE_SMS_SEND')")
     @Transactional
     public void sendMessage(@RequestBody String content, @PathVariable List<Long> customerIds) throws Exception {
+        CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
+        if(options.getSmsPoints() <= 0){
+            throw new CustomException("عفواً، ليس لديك رصيد كافي لإرسال الرسائل، قم بالاتصال بالدعم الفني لشحن الرصيد");
+        }
         ListIterator<Long> listIterator = customerIds.listIterator();
         while (listIterator.hasNext()) {
             Long id = listIterator.next();
@@ -216,7 +220,6 @@ public class CustomerRest {
             entityHistoryListener.perform(builder.toString());
 
             if(jsonResponse.getInt("Code") == 100){
-                CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
                 options.setSmsPoints(options.getSmsPoints() - jsonResponse.getInt("totalcout"));
                 Initializer.company.setOptions(JSONConverter.toString(options));
                 Initializer.company = companyService.save(Initializer.company);

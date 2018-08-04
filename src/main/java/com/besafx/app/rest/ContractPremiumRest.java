@@ -1,6 +1,7 @@
 package com.besafx.app.rest;
 
 import com.besafx.app.auditing.EntityHistoryListener;
+import com.besafx.app.config.CustomException;
 import com.besafx.app.config.EnjazSMS;
 import com.besafx.app.entity.ContractPayment;
 import com.besafx.app.entity.ContractPremium;
@@ -130,6 +131,10 @@ public class ContractPremiumRest {
     @PreAuthorize("hasRole('ROLE_SMS_SEND')")
     @Transactional
     public void sendMessage(@RequestBody String content, @PathVariable List<Long> contractPremiumIds) throws Exception {
+        CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
+        if(options.getSmsPoints() <= 0){
+            throw new CustomException("عفواً، ليس لديك رصيد كافي لإرسال الرسائل، قم بالاتصال بالدعم الفني لشحن الرصيد");
+        }
         ListIterator<Long> listIterator = contractPremiumIds.listIterator();
         while (listIterator.hasNext()) {
             Long id = listIterator.next();
@@ -156,7 +161,6 @@ public class ContractPremiumRest {
             entityHistoryListener.perform(builder.toString());
 
             if(jsonResponse.getInt("Code") == 100){
-                CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
                 options.setSmsPoints(options.getSmsPoints() - jsonResponse.getInt("totalcout"));
                 Initializer.company.setOptions(JSONConverter.toString(options));
                 Initializer.company = companyService.save(Initializer.company);
