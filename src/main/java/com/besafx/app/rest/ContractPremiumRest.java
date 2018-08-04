@@ -1,14 +1,18 @@
 package com.besafx.app.rest;
 
 import com.besafx.app.auditing.EntityHistoryListener;
-import com.besafx.app.config.GatewaySMS;
+import com.besafx.app.config.EnjazSMS;
 import com.besafx.app.entity.ContractPayment;
 import com.besafx.app.entity.ContractPremium;
+import com.besafx.app.init.Initializer;
 import com.besafx.app.search.ContractPremiumSearch;
 import com.besafx.app.service.BankTransactionService;
+import com.besafx.app.service.CompanyService;
 import com.besafx.app.service.ContractPaymentService;
 import com.besafx.app.service.ContractPremiumService;
+import com.besafx.app.util.CompanyOptions;
 import com.besafx.app.util.DateConverter;
+import com.besafx.app.util.JSONConverter;
 import com.besafx.app.ws.Notification;
 import com.besafx.app.ws.NotificationDegree;
 import com.besafx.app.ws.NotificationService;
@@ -45,6 +49,9 @@ public class ContractPremiumRest {
             "-contractPayments";
 
     @Autowired
+    private CompanyService companyService;
+
+    @Autowired
     private ContractPremiumService contractPremiumService;
 
     @Autowired
@@ -60,7 +67,7 @@ public class ContractPremiumRest {
     private NotificationService notificationService;
 
     @Autowired
-    private GatewaySMS gatewaySMS;
+    private EnjazSMS enjazSMS;
 
     @Autowired
     private EntityHistoryListener entityHistoryListener;
@@ -122,9 +129,7 @@ public class ContractPremiumRest {
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_SMS_SEND')")
     @Transactional
-    public void sendMessage(
-            @RequestBody String content,
-            @PathVariable List<Long> contractPremiumIds) throws Exception {
+    public void sendMessage(@RequestBody String content, @PathVariable List<Long> contractPremiumIds) throws Exception {
         ListIterator<Long> listIterator = contractPremiumIds.listIterator();
         while (listIterator.hasNext()) {
             Long id = listIterator.next();
@@ -132,8 +137,9 @@ public class ContractPremiumRest {
             String message = content.replaceAll("#amount#", contractPremium.getAmount().toString())
                                     .replaceAll("#dueDate#", DateConverter.getDateInFormat(contractPremium.getDueDate()));
             String mobile = "966" + contractPremium.getContract().getCustomer().getContact().getMobile().substring(1);
-            Future<String> task = gatewaySMS.sendSMS(mobile, message);
+            Future<String> task = enjazSMS.sendSMS(mobile, message);
             String taskResult = task.get();
+            JSONObject jsonResponse = new JSONObject(taskResult);
             StringBuilder builder = new StringBuilder();
             builder.append("الرقم / ");
             builder.append(mobile);
@@ -142,12 +148,24 @@ public class ContractPremiumRest {
             builder.append(message);
             builder.append("<br/>");
             builder.append(" ، نتيجة الإرسال: ");
-            builder.append(new JSONObject(taskResult).getString("ErrorMessage"));
+            builder.append(jsonResponse.getString("MessageIs"));
             notificationService.notifyAll(Notification
                                                   .builder()
                                                   .message(builder.toString())
                                                   .type(NotificationDegree.information).build());
             entityHistoryListener.perform(builder.toString());
+
+            if(jsonResponse.getInt("Code") == 100){
+                CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
+                options.setSmsPoints(options.getSmsPoints() - jsonResponse.getInt("totalcout"));
+                Initializer.company.setOptions(JSONConverter.toString(options));
+                Initializer.company = companyService.save(Initializer.company);
+                notificationService.notifyAll(Notification
+                                                      .builder()
+                                                      .code("UPDATE_COMPANY_OPTIONS")
+                                                      .message(Initializer.company.getOptions())
+                                                      .build());
+            }
         }
     }
 

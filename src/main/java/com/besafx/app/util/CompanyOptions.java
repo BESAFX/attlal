@@ -15,6 +15,8 @@ public class CompanyOptions {
 
     private String smsPassword;
 
+    private Integer smsPoints;
+
     private Double vatFactor;
 
     private String logo;

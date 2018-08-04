@@ -65,12 +65,11 @@
 
             </div>
 
-            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-init="findSmsCredit()">
+            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <h3 class="box-info">
                     <span>الرصيد = </span>
-                    {{sms.credit}}
-                    <span>[{{sms.description}}]</span>
+                    {{selectedCompany.options.smsPoints}}
                 </h3>
 
             </div>
@@ -95,7 +94,7 @@
         <div class="row">
             <button uib-tooltip="ارسال"
                     tooltip-append-to-body="true"
-                    ng-disabled="sms.credit === 0"
+                    ng-disabled="selectedCompany.options.smsPoints === 0"
                     type="submit"
                     class="mdl-button mdl-js-button mdl-js-ripple-effect col-xs-4 col-sm-4 col-md-4">
                 <img class="material-icons mdl-list__item-icon" ng-src="/ui/img/{{iconSet}}/print.{{iconSetType}}" width="24" height="24">

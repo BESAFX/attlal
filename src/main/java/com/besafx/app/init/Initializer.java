@@ -96,6 +96,7 @@ public class Initializer implements CommandLineRunner {
                             CompanyOptions.builder()
                                           .smsUserName("username")
                                           .smsPassword("password")
+                                          .smsPoints(500)
                                           .vatFactor(0.05)
                                           .logo("---")
                                           .background("---")

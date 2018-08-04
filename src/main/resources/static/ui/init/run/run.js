@@ -235,10 +235,17 @@ app.run([
         $rootScope.globalMessages = [];
         $stomp.connect('/ws').then(function () {
             $stomp.subscribe('/user/queue/notify', function (payload, headers, res) {
+
                 $rootScope.globalMessage = payload.message;
                 $rootScope.globalMessages.push(payload.message);
+
+                if(payload.code==='UPDATE_COMPANY_OPTIONS'){
+                    $rootScope.selectedCompany.options = JSON.parse(payload.message);
+                }else{
+                    $rootScope.showNotify(payload.title, payload.message, payload.type, payload.icon);
+                }
+
                 $rootScope.$apply();
-                $rootScope.showNotify(payload.title, payload.message, payload.type, payload.icon);
             }, {'headers': 'notify'});
         });
         $rootScope.today = new Date();

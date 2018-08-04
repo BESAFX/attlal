@@ -2,11 +2,14 @@ package com.besafx.app.rest;
 
 import com.besafx.app.auditing.EntityHistoryListener;
 import com.besafx.app.config.CustomException;
-import com.besafx.app.config.GatewaySMS;
+import com.besafx.app.config.EnjazSMS;
 import com.besafx.app.entity.ContractPayment;
 import com.besafx.app.entity.Customer;
+import com.besafx.app.init.Initializer;
 import com.besafx.app.search.CustomerSearch;
 import com.besafx.app.service.*;
+import com.besafx.app.util.CompanyOptions;
+import com.besafx.app.util.JSONConverter;
 import com.besafx.app.ws.Notification;
 import com.besafx.app.ws.NotificationDegree;
 import com.besafx.app.ws.NotificationService;
@@ -55,6 +58,9 @@ public class CustomerRest {
             "contact[id,shortName,mobile]";
 
     @Autowired
+    private CompanyService companyService;
+
+    @Autowired
     private CustomerService customerService;
 
     @Autowired
@@ -82,7 +88,7 @@ public class CustomerRest {
     private NotificationService notificationService;
 
     @Autowired
-    private GatewaySMS gatewaySMS;
+    private EnjazSMS enjazSMS;
 
     @Autowired
     private EntityHistoryListener entityHistoryListener;
@@ -190,8 +196,9 @@ public class CustomerRest {
             Customer customer = customerService.findOne(id);
             String message = content.replaceAll("#remain#", customer.getContractsRemain().toString());
             String mobile = "966" + customer.getContact().getMobile().substring(1);
-            Future<String> task = gatewaySMS.sendSMS(mobile, message);
+            Future<String> task = enjazSMS.sendSMS(mobile, message);
             String taskResult = task.get();
+            JSONObject jsonResponse = new JSONObject(taskResult);
             StringBuilder builder = new StringBuilder();
             builder.append("إرسال رسالة SMS إلى الرقم / ");
             builder.append(mobile);
@@ -200,13 +207,25 @@ public class CustomerRest {
             builder.append(message);
             builder.append("<br/>");
             builder.append(" ، نتيجة الإرسال: ");
-            builder.append(new JSONObject(taskResult).getString("ErrorMessage"));
+            builder.append(jsonResponse.getString("MessageIs"));
             notificationService.notifyAll(Notification
                                                   .builder()
                                                   .message(builder.toString())
                                                   .type(NotificationDegree.information)
                                                   .build());
             entityHistoryListener.perform(builder.toString());
+
+            if(jsonResponse.getInt("Code") == 100){
+                CompanyOptions options = JSONConverter.toObject(Initializer.company.getOptions(), CompanyOptions.class);
+                options.setSmsPoints(options.getSmsPoints() - jsonResponse.getInt("totalcout"));
+                Initializer.company.setOptions(JSONConverter.toString(options));
+                Initializer.company = companyService.save(Initializer.company);
+                notificationService.notifyAll(Notification
+                                                      .builder()
+                                                      .code("UPDATE_COMPANY_OPTIONS")
+                                                      .message(Initializer.company.getOptions())
+                                                      .build());
+            }
         }
     }
 
