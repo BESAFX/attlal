@@ -25,7 +25,7 @@ public class EnjazSMS {
 
     public String unicode = "E";
 
-    public String sender = "Anni";
+    public String sender = "ATTLAL";
 
     public String userName = "anni";
 
